@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-Hant">
+<html lang="ja">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -196,6 +196,90 @@
     main { background: var(--bg); }
     .section {
       padding: clamp(62px, 9vw, 132px) clamp(20px, 5vw, 76px);
+    }
+
+    .manifesto {
+      position: relative;
+      min-height: 118svh;
+      display: grid;
+      place-items: center;
+      padding: clamp(86px, 10vw, 148px) clamp(22px, 7vw, 104px);
+      overflow: clip;
+      background:
+        radial-gradient(circle at 82% 18%, color-mix(in oklch, var(--blush) 58%, transparent) 0 14%, transparent 32%),
+        linear-gradient(180deg, var(--bg), color-mix(in oklch, var(--ivory) 72%, var(--blush)));
+      border-bottom: 1px solid color-mix(in oklch, var(--border) 66%, transparent);
+    }
+
+    .manifesto::before,
+    .manifesto::after {
+      content: "";
+      position: absolute;
+      pointer-events: none;
+      border: 1px solid color-mix(in oklch, var(--accent) 22%, transparent);
+      opacity: 0.45;
+    }
+
+    .manifesto::before {
+      width: min(34vw, 420px);
+      aspect-ratio: 1;
+      left: max(-90px, -7vw);
+      top: 16%;
+      border-radius: 999px;
+    }
+
+    .manifesto::after {
+      width: min(24vw, 280px);
+      aspect-ratio: 3 / 4;
+      right: max(-74px, -4vw);
+      bottom: 12%;
+      transform: rotate(-8deg);
+    }
+
+    .manifesto-inner {
+      position: relative;
+      z-index: 1;
+      width: min(860px, 100%);
+      display: grid;
+      gap: clamp(26px, 4vw, 46px);
+    }
+
+    .manifesto-label {
+      justify-self: center;
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+    }
+
+    .manifesto-lines {
+      display: grid;
+      gap: clamp(18px, 2.7vw, 28px);
+      margin: 0;
+      color: var(--deep);
+      text-align: center;
+      font-family: var(--font-display);
+      font-size: clamp(23px, 2.9vw, 39px);
+      line-height: 1.78;
+      letter-spacing: 0.04em;
+    }
+
+    .manifesto-line {
+      display: block;
+      opacity: 0;
+      transform: translateY(30px);
+      filter: blur(8px);
+      transition:
+        opacity 900ms var(--ease),
+        transform 900ms var(--ease),
+        filter 900ms var(--ease);
+      transition-delay: calc(var(--line-index, 0) * 115ms);
+    }
+
+    .manifesto-line.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
     }
 
     .story {
@@ -597,6 +681,19 @@
         padding: 106px 20px 38px;
       }
       h1 { font-size: clamp(54px, 16vw, 78px); }
+      .manifesto {
+        min-height: auto;
+        place-items: start;
+        padding-block: 82px 92px;
+      }
+      .manifesto-lines {
+        text-align: left;
+        font-size: clamp(23px, 6.8vw, 34px);
+        line-height: 1.68;
+      }
+      .manifesto-label {
+        justify-self: start;
+      }
       .story {
         grid-template-columns: 1fr;
       }
@@ -647,22 +744,36 @@
         aspect-ratio: 0.76;
       }
     }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      .manifesto-line {
+        opacity: 1;
+        transform: none;
+        filter: none;
+      }
+    }
   </style>
 </head>
 <body>
   <header class="site-header" id="siteHeader">
     <div class="nav-left">
-      <button class="icon-btn" id="menuOpen" aria-label="開啟選單">
+      <button class="icon-btn" id="menuOpen" aria-label="メニューを開く">
         <svg width="18" height="12" viewBox="0 0 18 12" aria-hidden="true"><path d="M0 1h18M0 11h18" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>
       </button>
     </div>
-    <a class="brand" href="#top" aria-label="Maison Reverie 首頁">Maison Reverie</a>
+    <a class="brand" href="#top" aria-label="Maison Reverie ホーム">Maison Reverie</a>
     <div class="nav-right">
       <button class="text-btn" type="button">Account</button>
-      <button class="icon-btn" id="searchOpen" aria-label="開啟搜尋">
+      <button class="icon-btn" id="searchOpen" aria-label="検索を開く">
         <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><circle cx="8" cy="8" r="5.4" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="m12.2 12.2 4 4" fill="none" stroke="currentColor" stroke-width="1.3"/></svg>
       </button>
-      <button class="icon-btn bag-btn" type="button" aria-label="購物袋">
+      <button class="icon-btn bag-btn" type="button" aria-label="ショッピングバッグ">
         <svg width="17" height="18" viewBox="0 0 17 18" aria-hidden="true"><path d="M3.2 5.7h10.6l.8 10.4H2.4L3.2 5.7Z" fill="none" stroke="currentColor" stroke-width="1.25"/><path d="M5.8 5.7c0-2 1-3.3 2.7-3.3s2.7 1.3 2.7 3.3" fill="none" stroke="currentColor" stroke-width="1.25"/></svg>
         <span class="cart-count" id="cartCount">2</span>
       </button>
@@ -670,12 +781,29 @@
   </header>
 
   <main id="top">
-    <section class="hero" aria-label="Maison Reverie 新季形象">
+    <section class="hero" aria-label="Maison Reverie 新作コレクション">
       <div class="hero-copy">
         <p class="kicker">2026 Spring Collection</p>
         <h1>Soft rituals, luminous days</h1>
-        <p>白色蕾絲、晨間自然光與慢下來的生活秩序，為日常衣櫥留下一點安靜的光。</p>
+        <p>白いレース、朝の自然光、そして少しだけゆっくり流れる時間。日常のクローゼットに、静かなときめきを。</p>
         <a class="cta" href="#new-in">Shop New In <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <section class="manifesto" aria-label="Douce Reverie ブランドマニフェスト">
+      <div class="manifesto-inner">
+        <span class="manifesto-label">Manifesto</span>
+        <p class="manifesto-lines">
+          <span class="manifesto-line" style="--line-index: 0;">大人になるにつれて増えていく「常識」や「ふさわしさ」。</span>
+          <span class="manifesto-line" style="--line-index: 1;">そんな窮屈な現実はちょっとだけお休みして、最高に甘い「ごっこ遊び」を始めよう。</span>
+          <span class="manifesto-line" style="--line-index: 2;">誰かのためじゃなく、私自身がときめくために。</span>
+          <span class="manifesto-line" style="--line-index: 3;">フリル、リボン、ヴィンテージのレース。鏡の前に立つだけで、映画のヒロインになれる魔法。</span>
+          <span class="manifesto-line" style="--line-index: 4;">貴女はなんだってなれる、貴女がなりたいなら。</span>
+          <span class="manifesto-line" style="--line-index: 5;">目覚めない「甘い白昼夢（Douce Rêverie）」の中で、思い切りワガママな少女でいよう。</span>
+          <span class="manifesto-line" style="--line-index: 6;">好きな服を着て、好きな自分を演じればいい。</span>
+          <span class="manifesto-line" style="--line-index: 7;">Douce Rêverieは、どんな時も私を永遠の「少女」に戻してくれる、自由で、ロマンティックで、ちょっぴり甘いおまじない。</span>
+          <span class="manifesto-line" style="--line-index: 8;">私を世界で一番甘やかすための、自己肯定感のクローゼット。</span>
+        </p>
       </div>
     </section>
 
@@ -683,9 +811,9 @@
       <div class="story-copy">
         <span class="eyebrow">2026 Spring Collection / Dear Morning</span>
         <h2>Pieces made for quiet arrival.</h2>
-        <p>Maison Reverie 以柔軟輪廓、乾淨材質與不張揚的細節，延伸出適合晨間、旅行與週末聚會的生活衣櫥。</p>
+        <p>Douce Rêverieは、やわらかな輪郭、澄んだ素材、控えめなディテールで、朝にも旅にも週末の約束にも寄り添うワードローブを描きます。</p>
       </div>
-      <div class="featured" aria-label="精選商品">
+      <div class="featured" aria-label="おすすめ商品">
         <article class="product">
           <div class="product-media">
             <div class="product-actions">
@@ -718,9 +846,9 @@
     <section class="section campaign" aria-label="形象橫幅">
       <div class="banner">
         <div class="banner-inner">
-          <span class="eyebrow">Maison Reverie Journal</span>
+          <span class="eyebrow">Douce Rêverie Journal</span>
           <h2>Dear Morning</h2>
-          <p>一場關於窗邊、白色布料與柔和生活感的春日 collection。</p>
+          <p>窓辺、白い布、そして甘くやわらかな生活感から生まれる春の collection。</p>
           <a class="light-link" href="#best">View Collection</a>
         </div>
       </div>
@@ -731,7 +859,7 @@
         <span class="eyebrow">Best Seller</span>
         <h2>Quiet favorites, kept close.</h2>
       </div>
-      <div class="grid-products" aria-label="熱銷商品">
+      <div class="grid-products" aria-label="人気商品">
         <article class="product">
           <div class="product-media">
             <div class="product-actions">
@@ -774,13 +902,13 @@
       </div>
     </section>
 
-    <section class="section journal" aria-label="品牌日誌">
+    <section class="section journal" aria-label="ブランドジャーナル">
       <div class="journal-head">
         <div>
           <span class="eyebrow">Journal / Instagram</span>
           <h2>From the dressing room.</h2>
         </div>
-        <a class="light-link" style="color: var(--fg);" href="#top">Follow @maisonreverie</a>
+        <a class="light-link" style="color: var(--fg);" href="#top">Follow @doucereverie</a>
       </div>
       <div class="journal-strip">
         <a class="journal-tile" href="#top"><span>Window light</span></a>
@@ -792,10 +920,10 @@
   </main>
 
   <aside class="drawer" id="drawer" aria-hidden="true">
-    <button class="shade" id="menuClose" type="button" aria-label="關閉選單"></button>
+    <button class="shade" id="menuClose" type="button" aria-label="メニューを閉じる"></button>
     <div class="drawer-panel">
-      <button class="icon-btn" id="menuCloseButton" type="button" aria-label="關閉選單">×</button>
-      <nav aria-label="主選單">
+      <button class="icon-btn" id="menuCloseButton" type="button" aria-label="メニューを閉じる">×</button>
+      <nav aria-label="メインメニュー">
         <a href="#new-in">New In</a>
         <a href="#best">Best Seller</a>
         <a href="#top">Collection</a>
@@ -805,13 +933,13 @@
   </aside>
 
   <section class="search-overlay" id="searchOverlay" aria-hidden="true">
-    <button class="shade" id="searchClose" type="button" aria-label="關閉搜尋"></button>
-    <div class="search-box" role="dialog" aria-modal="true" aria-label="搜尋商品">
+    <button class="shade" id="searchClose" type="button" aria-label="検索を閉じる"></button>
+    <div class="search-box" role="dialog" aria-modal="true" aria-label="商品検索">
       <div class="search-row">
         <input id="searchInput" type="search" placeholder="Search lace, ivory, knit..." />
-        <button class="icon-btn" id="searchCloseButton" type="button" aria-label="關閉搜尋">×</button>
+        <button class="icon-btn" id="searchCloseButton" type="button" aria-label="検索を閉じる">×</button>
       </div>
-      <div class="suggestions" aria-label="熱門搜尋">
+      <div class="suggestions" aria-label="人気検索">
         <button type="button">Lace dress</button>
         <button type="button">Ivory blouse</button>
         <button type="button">Spring knit</button>
@@ -819,7 +947,7 @@
     </div>
   </section>
 
-  <div class="toast" id="toast" role="status" aria-live="polite">Added to bag</div>
+  <div class="toast" id="toast" role="status" aria-live="polite">バッグに追加しました</div>
 
   <script>
     const header = document.getElementById("siteHeader");
@@ -846,8 +974,30 @@
       showToast.timer = window.setTimeout(() => toast.classList.remove("is-visible"), 1400);
     }
 
+    function initManifestoReveal() {
+      const lines = [...document.querySelectorAll(".manifesto-line")];
+      if (!lines.length) return;
+
+      if (!("IntersectionObserver" in window) || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        lines.forEach((line) => line.classList.add("is-visible"));
+        return;
+      }
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          entry.target.classList.toggle("is-visible", entry.isIntersecting);
+        });
+      }, {
+        rootMargin: "0px 0px -18% 0px",
+        threshold: 0.36
+      });
+
+      lines.forEach((line) => observer.observe(line));
+    }
+
     window.addEventListener("scroll", syncHeader, { passive: true });
     syncHeader();
+    initManifestoReveal();
 
     document.getElementById("menuOpen").addEventListener("click", () => setOpen(drawer, true));
     document.getElementById("menuClose").addEventListener("click", () => setOpen(drawer, false));
@@ -863,7 +1013,7 @@
     document.querySelectorAll(".quick").forEach((button) => {
       button.addEventListener("click", () => {
         cartCount.textContent = String(Number(cartCount.textContent) + 1);
-        showToast("Added to bag");
+        showToast("バッグに追加しました");
       });
     });
 
