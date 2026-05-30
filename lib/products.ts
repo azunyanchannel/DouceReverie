@@ -119,3 +119,138 @@ export const bestSellerProducts: Product[] = [
     }
   }
 ];
+
+export const moreProducts: Product[] = [
+  {
+    id: "petal-collar-cardigan",
+    title: {
+      "zh-CN": "花瓣领针织开衫",
+      ja: "Petal Collar Cardigan",
+      en: "Petal Collar Cardigan",
+      "zh-TW": "花瓣領針織開衫"
+    },
+    badge: {
+      "zh-CN": "少量现货",
+      ja: "Limited stock",
+      en: "Limited stock",
+      "zh-TW": "少量現貨"
+    },
+    prices: {
+      "zh-CN": 1080,
+      ja: 22800,
+      en: 152,
+      "zh-TW": 4680
+    }
+  },
+  {
+    id: "rose-tea-camisole",
+    title: {
+      "zh-CN": "玫瑰茶吊带上衣",
+      ja: "Rose Tea Camisole",
+      en: "Rose Tea Camisole",
+      "zh-TW": "玫瑰茶吊帶上衣"
+    },
+    badge: {
+      "zh-CN": "春季限定",
+      ja: "Spring limited",
+      en: "Spring limited",
+      "zh-TW": "春季限定"
+    },
+    prices: {
+      "zh-CN": 720,
+      ja: 15800,
+      en: 104,
+      "zh-TW": 3180
+    }
+  },
+  {
+    id: "misty-lace-trousers",
+    title: {
+      "zh-CN": "雾白蕾丝长裤",
+      ja: "Misty Lace Trousers",
+      en: "Misty Lace Trousers",
+      "zh-TW": "霧白蕾絲長褲"
+    },
+    badge: {
+      "zh-CN": "新色追加",
+      ja: "New color added",
+      en: "New color added",
+      "zh-TW": "新色追加"
+    },
+    prices: {
+      "zh-CN": 1280,
+      ja: 26800,
+      en: 178,
+      "zh-TW": 5580
+    }
+  },
+  {
+    id: "sunday-ribbon-dress",
+    title: {
+      "zh-CN": "周日蝴蝶结连衣裙",
+      ja: "Sunday Ribbon Dress",
+      en: "Sunday Ribbon Dress",
+      "zh-TW": "週日蝴蝶結連衣裙"
+    },
+    badge: {
+      "zh-CN": "预约商品",
+      ja: "Pre-order",
+      en: "Pre-order",
+      "zh-TW": "預約商品"
+    },
+    prices: {
+      "zh-CN": 1680,
+      ja: 34800,
+      en: 238,
+      "zh-TW": 7280
+    }
+  },
+  {
+    id: "milk-satin-bow-skirt",
+    title: {
+      "zh-CN": "牛奶缎面蝴蝶结半裙",
+      ja: "Milk Satin Bow Skirt",
+      en: "Milk Satin Bow Skirt",
+      "zh-TW": "牛奶緞面蝴蝶結半裙"
+    },
+    badge: {
+      "zh-CN": "搭配推荐",
+      ja: "Styling pick",
+      en: "Styling pick",
+      "zh-TW": "搭配推薦"
+    },
+    prices: {
+      "zh-CN": 980,
+      ja: 20800,
+      en: 138,
+      "zh-TW": 4280
+    }
+  },
+  {
+    id: "cloud-room-knit-vest",
+    title: {
+      "zh-CN": "云朵房间针织背心",
+      ja: "Cloud Room Knit Vest",
+      en: "Cloud Room Knit Vest",
+      "zh-TW": "雲朵房間針織背心"
+    },
+    badge: {
+      "zh-CN": "人气补货",
+      ja: "Restocked favorite",
+      en: "Restocked favorite",
+      "zh-TW": "人氣補貨"
+    },
+    prices: {
+      "zh-CN": 860,
+      ja: 18800,
+      en: 124,
+      "zh-TW": 3780
+    }
+  }
+];
+
+export const allProducts: Product[] = [
+  ...featuredProducts,
+  ...bestSellerProducts,
+  ...moreProducts
+];

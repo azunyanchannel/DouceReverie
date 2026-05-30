@@ -61,9 +61,17 @@
   },
   "commerce": {
     "quickAdd": "Quick add",
+    "viewMore": "Preview more products",
     "wishlist": "Add to wishlist",
     "soldOut": "Sold out",
     "toast": "Added to bag"
+  },
+  "catalog": {
+    "aria": "All products",
+    "back": "Back home",
+    "eyebrow": "All Products",
+    "title": "The full product list",
+    "body": "Browse every visible Douce Rêverie piece in one place, from new-season lace to favorite soft knits."
   },
   "search": {
     "aria": "Product search",

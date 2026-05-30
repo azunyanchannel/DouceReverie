@@ -61,9 +61,17 @@
   },
   "commerce": {
     "quickAdd": "Quick add",
+    "viewMore": "預覽更多產品",
     "wishlist": "加入願望清單",
     "soldOut": "Sold out",
     "toast": "已加入購物袋"
+  },
+  "catalog": {
+    "aria": "所有商品",
+    "back": "返回首頁",
+    "eyebrow": "All Products",
+    "title": "完整商品列表",
+    "body": "瀏覽 Douce Rêverie 目前可見的所有單品，從新季蕾絲到人氣針織，都整理在這裡。"
   },
   "search": {
     "aria": "商品搜尋",

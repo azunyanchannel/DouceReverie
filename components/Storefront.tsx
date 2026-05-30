@@ -102,6 +102,11 @@ export default function Storefront({
               />
             ))}
           </div>
+          <div className="section-link-row">
+            <Link className="more-link" href={`/${currentLocale}/products`}>
+              {messages.commerce.viewMore} <span aria-hidden="true">→</span>
+            </Link>
+          </div>
         </section>
 
         <section className="section campaign" aria-label={messages.campaign.aria}>
@@ -132,6 +137,11 @@ export default function Storefront({
                 product={product}
               />
             ))}
+          </div>
+          <div className="section-link-row">
+            <Link className="more-link" href={`/${currentLocale}/products`}>
+              {messages.commerce.viewMore} <span aria-hidden="true">→</span>
+            </Link>
           </div>
         </section>
 

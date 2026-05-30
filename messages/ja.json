@@ -61,9 +61,17 @@
   },
   "commerce": {
     "quickAdd": "Quick add",
+    "viewMore": "もっと商品を見る",
     "wishlist": "加入願望清單",
     "soldOut": "Sold out",
     "toast": "バッグに追加しました"
+  },
+  "catalog": {
+    "aria": "すべての商品",
+    "back": "ホームへ戻る",
+    "eyebrow": "All Products",
+    "title": "すべての商品",
+    "body": "新作のレースから人気のやわらかなニットまで、Douce Rêverieの表示中の商品を一覧でご覧いただけます。"
   },
   "search": {
     "aria": "商品検索",

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getMessages, isLocale, locales, type Locale } from "@/lib/i18n";
-import "../globals.css";
+import { getMessages, isLocale, locales } from "@/lib/i18n";
 
 type LocaleLayoutProps = {
   children: React.ReactNode;
@@ -27,9 +26,5 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
   const { locale } = await params;
   if (!isLocale(locale)) notFound();
 
-  return (
-    <html lang={locale as Locale}>
-      <body>{children}</body>
-    </html>
-  );
+  return children;
 }
