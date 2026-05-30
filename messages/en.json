@@ -1,0 +1,74 @@
+{
+  "meta": {
+    "title": "Douce Rêverie",
+    "description": "A free, romantic, slightly sweet closet for becoming yourself."
+  },
+  "nav": {
+    "account": "Account",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu",
+    "searchOpen": "Open search",
+    "searchClose": "Close search",
+    "bag": "Shopping bag",
+    "mainMenu": "Main menu"
+  },
+  "hero": {
+    "aria": "Douce Rêverie new collection",
+    "kicker": "2026 Spring Collection",
+    "title": "Soft rituals, luminous days",
+    "body": "White lace, morning light, and a slower kind of time. A quiet little thrill for the everyday closet.",
+    "cta": "Shop New In"
+  },
+  "manifesto": {
+    "aria": "Douce Rêverie brand manifesto",
+    "label": "Manifesto",
+    "lines": [
+      "The older we become, the more we inherit rules about what is proper.",
+      "Let that cramped reality rest for a while, and begin the sweetest game of make-believe.",
+      "Not for anyone else, but for the part of me that wants to feel enchanted.",
+      "Frills, ribbons, vintage lace. Standing in front of the mirror becomes a spell for becoming a film heroine.",
+      "You can become anything, if that is who you want to be.",
+      "Inside an unwaking sweet daydream, Douce Rêverie, stay as willful and girlish as you like.",
+      "Wear what you love and perform the version of yourself you love.",
+      "Douce Rêverie is a free, romantic, slightly sweet charm that returns me to my eternal girlhood.",
+      "A self-affirming closet made to spoil me more than anyone else in the world."
+    ]
+  },
+  "story": {
+    "eyebrow": "2026 Spring Collection / Dear Morning",
+    "title": "Pieces made for quiet arrival.",
+    "body": "Douce Rêverie builds a wardrobe for mornings, travel, and weekend promises through soft shapes, clear materials, and restrained details.",
+    "productsAria": "Featured products"
+  },
+  "campaign": {
+    "aria": "Campaign banner",
+    "eyebrow": "Douce Rêverie Journal",
+    "title": "Dear Morning",
+    "body": "A spring collection born from window light, white fabric, and a softly sweet sense of living.",
+    "cta": "View Collection"
+  },
+  "best": {
+    "eyebrow": "Best Seller",
+    "title": "Quiet favorites, kept close.",
+    "productsAria": "Best-selling products"
+  },
+  "journal": {
+    "aria": "Brand journal",
+    "eyebrow": "Journal / Instagram",
+    "title": "From the dressing room.",
+    "follow": "Follow @doucereverie",
+    "tiles": ["Window light", "Soft lace", "Morning edit", "Quiet room"]
+  },
+  "commerce": {
+    "quickAdd": "Quick add",
+    "wishlist": "Add to wishlist",
+    "soldOut": "Sold out",
+    "toast": "Added to bag"
+  },
+  "search": {
+    "aria": "Product search",
+    "placeholder": "Search lace, ivory, knit...",
+    "suggestions": "Popular searches",
+    "items": ["Lace dress", "Ivory blouse", "Spring knit"]
+  }
+}

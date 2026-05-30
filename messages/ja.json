@@ -1,0 +1,74 @@
+{
+  "meta": {
+    "title": "Douce Rêverie",
+    "description": "自由で、ロマンティックで、ちょっぴり甘い少女のためのクローゼット。"
+  },
+  "nav": {
+    "account": "Account",
+    "menuOpen": "メニューを開く",
+    "menuClose": "メニューを閉じる",
+    "searchOpen": "検索を開く",
+    "searchClose": "検索を閉じる",
+    "bag": "ショッピングバッグ",
+    "mainMenu": "メインメニュー"
+  },
+  "hero": {
+    "aria": "Douce Rêverie 新作コレクション",
+    "kicker": "2026 Spring Collection",
+    "title": "Soft rituals, luminous days",
+    "body": "白いレース、朝の自然光、そして少しだけゆっくり流れる時間。日常のクローゼットに、静かなときめきを。",
+    "cta": "Shop New In"
+  },
+  "manifesto": {
+    "aria": "Douce Rêverie ブランドマニフェスト",
+    "label": "Manifesto",
+    "lines": [
+      "大人になるにつれて増えていく「常識」や「ふさわしさ」。",
+      "そんな窮屈な現実はちょっとだけお休みして、最高に甘い「ごっこ遊び」を始めよう。",
+      "誰かのためじゃなく、私自身がときめくために。",
+      "フリル、リボン、ヴィンテージのレース。鏡の前に立つだけで、映画のヒロインになれる魔法。",
+      "貴女はなんだってなれる、貴女がなりたいなら。",
+      "目覚めない「甘い白昼夢（Douce Rêverie）」の中で、思い切りワガママな少女でいよう。",
+      "好きな服を着て、好きな自分を演じればいい。",
+      "Douce Rêverieは、どんな時も私を永遠の「少女」に戻してくれる、自由で、ロマンティックで、ちょっぴり甘いおまじない。",
+      "私を世界で一番甘やかすための、自己肯定感のクローゼット。"
+    ]
+  },
+  "story": {
+    "eyebrow": "2026 Spring Collection / Dear Morning",
+    "title": "Pieces made for quiet arrival.",
+    "body": "Douce Rêverieは、やわらかな輪郭、澄んだ素材、控えめなディテールで、朝にも旅にも週末の約束にも寄り添うワードローブを描きます。",
+    "productsAria": "おすすめ商品"
+  },
+  "campaign": {
+    "aria": "形象横幅",
+    "eyebrow": "Douce Rêverie Journal",
+    "title": "Dear Morning",
+    "body": "窓辺、白い布、そして甘くやわらかな生活感から生まれる春の collection。",
+    "cta": "View Collection"
+  },
+  "best": {
+    "eyebrow": "Best Seller",
+    "title": "Quiet favorites, kept close.",
+    "productsAria": "人気商品"
+  },
+  "journal": {
+    "aria": "ブランドジャーナル",
+    "eyebrow": "Journal / Instagram",
+    "title": "From the dressing room.",
+    "follow": "Follow @doucereverie",
+    "tiles": ["Window light", "Soft lace", "Morning edit", "Quiet room"]
+  },
+  "commerce": {
+    "quickAdd": "Quick add",
+    "wishlist": "加入願望清單",
+    "soldOut": "Sold out",
+    "toast": "バッグに追加しました"
+  },
+  "search": {
+    "aria": "商品検索",
+    "placeholder": "Search lace, ivory, knit...",
+    "suggestions": "人気検索",
+    "items": ["Lace dress", "Ivory blouse", "Spring knit"]
+  }
+}

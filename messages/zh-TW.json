@@ -1,0 +1,74 @@
+{
+  "meta": {
+    "title": "Douce Rêverie",
+    "description": "自由、浪漫、帶一點甜的少女感衣櫥。"
+  },
+  "nav": {
+    "account": "Account",
+    "menuOpen": "開啟選單",
+    "menuClose": "關閉選單",
+    "searchOpen": "開啟搜尋",
+    "searchClose": "關閉搜尋",
+    "bag": "購物袋",
+    "mainMenu": "主選單"
+  },
+  "hero": {
+    "aria": "Douce Rêverie 新季形象",
+    "kicker": "2026 Spring Collection",
+    "title": "Soft rituals, luminous days",
+    "body": "白色蕾絲、晨間自然光，以及一點點慢下來的時間。為日常衣櫥留下一份安靜的心動。",
+    "cta": "Shop New In"
+  },
+  "manifesto": {
+    "aria": "Douce Rêverie 品牌宣言",
+    "label": "Manifesto",
+    "lines": [
+      "隨著長大而越來越多的「常識」與「得體」。",
+      "讓那些逼仄的現實先暫停一下，開始一場甜到極致的「扮演遊戲」吧。",
+      "不是為了任何人，而是為了讓我自己心動。",
+      "荷葉邊、蝴蝶結、復古蕾絲。只要站在鏡子前，就像擁有成為電影女主角的魔法。",
+      "只要妳願意，妳什麼都可以成為。",
+      "在不會醒來的「甜美白日夢（Douce Rêverie）」裡，盡情做一個任性的少女吧。",
+      "穿上喜歡的衣服，扮演喜歡的自己就好。",
+      "Douce Rêverie 是無論何時都能把我帶回永遠的「少女」的，自由、浪漫、帶一點甜的咒語。",
+      "一座為了把自己寵成世界第一而存在的，自我肯定感衣櫥。"
+    ]
+  },
+  "story": {
+    "eyebrow": "2026 Spring Collection / Dear Morning",
+    "title": "Pieces made for quiet arrival.",
+    "body": "Douce Rêverie 以柔軟輪廓、澄淨材質與克制細節，描繪適合清晨、旅行與週末約會的生活衣櫥。",
+    "productsAria": "推薦商品"
+  },
+  "campaign": {
+    "aria": "形象橫幅",
+    "eyebrow": "Douce Rêverie Journal",
+    "title": "Dear Morning",
+    "body": "一場由窗邊、白色布料與甜美生活感生長出的春日 collection。",
+    "cta": "View Collection"
+  },
+  "best": {
+    "eyebrow": "Best Seller",
+    "title": "Quiet favorites, kept close.",
+    "productsAria": "人氣商品"
+  },
+  "journal": {
+    "aria": "品牌日記",
+    "eyebrow": "Journal / Instagram",
+    "title": "From the dressing room.",
+    "follow": "Follow @doucereverie",
+    "tiles": ["Window light", "Soft lace", "Morning edit", "Quiet room"]
+  },
+  "commerce": {
+    "quickAdd": "Quick add",
+    "wishlist": "加入願望清單",
+    "soldOut": "Sold out",
+    "toast": "已加入購物袋"
+  },
+  "search": {
+    "aria": "商品搜尋",
+    "placeholder": "Search lace, ivory, knit...",
+    "suggestions": "熱門搜尋",
+    "items": ["Lace dress", "Ivory blouse", "Spring knit"]
+  }
+}

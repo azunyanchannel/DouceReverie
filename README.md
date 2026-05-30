@@ -1,16 +1,26 @@
 # Douce Reverie
 
-Initial static prototype for a high-end editorial fashion ecommerce homepage.
+Next.js prototype for a high-end editorial fashion ecommerce homepage.
 
-The first version is a standalone `index.html` generated from an Open Design concept pass, with original Maison Reverie visual direction and a local campaign image asset.
+The current version migrates the initial standalone HTML concept into a localized Next.js App Router project. Simplified Chinese is the default locale, with Japanese, English, and Traditional Chinese also available.
 
 ## Files
 
-- `index.html` - standalone interactive homepage prototype
-- `assets/maison-reverie-hero.png` - original hero campaign image
+- `app/[locale]/page.tsx` - localized homepage route
+- `components/Storefront.tsx` - interactive storefront experience
+- `messages/*.json` - locale dictionaries (`zh-CN`, `ja`, `en`, `zh-TW`)
+- `lib/currency.ts` - locale-aware currency formatting
+- `lib/products.ts` - prototype product data
+- `public/images/maison-reverie-hero.png` - original hero campaign image
 - `brand-spec.md` - extracted brand and visual direction
 - `critique.json` - design critique notes from the initial generation
+- `legacy-static/` - previous standalone HTML prototype
 
 ## Preview
 
-Open `index.html` directly in a browser.
+```bash
+npm install
+npm run dev
+```
+
+Open `http://localhost:3000/zh-CN`.
