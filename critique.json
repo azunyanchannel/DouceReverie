@@ -1,0 +1,26 @@
+{
+  "kind": "critique-panel",
+  "score": 4,
+  "axes": {
+    "philosophy": {
+      "score": 4,
+      "notes": "Editorial fashion-commerce posture is clear: full-bleed campaign image, quiet product modules, magazine-like copy rhythm, no SaaS framing."
+    },
+    "hierarchy": {
+      "score": 4,
+      "notes": "Hero headline anchors the first viewport; subsequent sections move from collection story to banner, best sellers, and journal with distinct scale changes."
+    },
+    "execution": {
+      "score": 4,
+      "notes": "Header state, overlays, hover actions, cart count, and responsive two-column mobile grid are implemented. Headless screenshot validation was blocked by local Chrome launch failure."
+    },
+    "specificity": {
+      "score": 4,
+      "notes": "Copy, product names, collection title, and visual language are specific to Maison Reverie and avoid copying the reference brand."
+    },
+    "restraint": {
+      "score": 4,
+      "notes": "Warm ivory, beige, blush, and charcoal are used with limited accent budget; decoration stays secondary to photography and product layout."
+    }
+  }
+}
