@@ -765,6 +765,61 @@ main { background: var(--bg); }
   gap: clamp(18px, 2.2vw, 30px);
 }
 
+.kh-loader {
+  --kh-plate: var(--ivory);
+  --kh-key: oklch(66% 0.13 88);
+  --kh-glow: var(--blush);
+  --kh-dur: 3s;
+
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.kh-plate { display: block; width: 100%; height: 100%; }
+.kh-plate-rect { fill: var(--kh-plate); }
+
+.kh-glow {
+  position: absolute;
+  left: 50%;
+  top: 42%;
+  width: 160px;
+  height: 160px;
+  transform: translate(-50%, -50%);
+  border-radius: 999px;
+  opacity: 0;
+  background: radial-gradient(circle, color-mix(in oklch, var(--kh-glow) 68%, transparent), transparent 66%);
+}
+
+.kh-key-fade { position: absolute; left: 50%; top: 42%; opacity: 0; z-index: 2; }
+.kh-key-slide { position: relative; perspective: 1080px; }
+.kh-key {
+  position: absolute;
+  left: -180px;
+  top: -45px;
+  transform-origin: 120px 45px;
+}
+
+.kh-run .kh-hole       { animation: kh-grow    var(--kh-dur) cubic-bezier(0.6, 0, 0.2, 1) both; }
+.kh-run .kh-plate-rect { animation: kh-plate   var(--kh-dur) ease both; }
+.kh-run .kh-glow       { animation: kh-glow    var(--kh-dur) ease both; }
+.kh-run .kh-key-fade   { animation: kh-keyfade var(--kh-dur) ease both; }
+.kh-run .kh-key-slide  { animation: kh-slide   var(--kh-dur) var(--ease) both; }
+.kh-run .kh-key        { animation: kh-turn    var(--kh-dur) cubic-bezier(0.6, 0, 0.2, 1) both; }
+
+.kh-hole { transform-box: fill-box; transform-origin: center; }
+@keyframes kh-grow    { 0%, 20% { transform: scale(1); } 26% { transform: scale(0.94); } 48% { transform: scale(2.4); } 100% { transform: scale(17); } }
+@keyframes kh-plate   { 0%, 88% { opacity: 1; } 96%, 100% { opacity: 0; } }
+@keyframes kh-glow    { 0%, 28% { opacity: 0; } 44% { opacity: 0.85; } 60%, 100% { opacity: 0; } }
+@keyframes kh-slide   { 0% { transform: translateX(-360px); opacity: 0; } 8% { opacity: 1; } 20%, 100% { transform: translateX(0); opacity: 1; } }
+@keyframes kh-turn    { 0%, 26% { transform: rotateX(0deg); } 30% { transform: rotateX(-14deg); } 48%, 100% { transform: rotateX(150deg); } }
+@keyframes kh-keyfade { 0%, 40% { opacity: 1; } 50%, 100% { opacity: 0; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .kh-loader { display: none; }
+}
+
 @media (max-width: 960px) {
   .locale-switch {
     position: fixed;

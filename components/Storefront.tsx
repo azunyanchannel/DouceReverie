@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion, useReducedMotion } from "motion/react";
 import { useEffect, useState } from "react";
+import KeyholeLoader from "@/components/KeyholeLoader";
 import { formatCurrency } from "@/lib/currency";
 import { localeLabels, localeNames, locales, type getMessages, type Locale } from "@/lib/i18n";
 import type { Product } from "@/lib/products";
@@ -207,6 +208,8 @@ export default function Storefront({
       <div className={`toast ${toastVisible ? "is-visible" : ""}`} role="status" aria-live="polite">
         {messages.commerce.toast}
       </div>
+
+      <KeyholeLoader />
     </>
   );
 }
